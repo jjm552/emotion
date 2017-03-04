@@ -25,11 +25,11 @@ function SaveSnap(){
 	var img = Base64Binary.decodeArrayBuffer(file);
     var ajax = new XMLHttpRequest();
     ajax.addEventListener("load", function(event) { uploadcomplete(event);}, false);
-    ajax.open("POST", "https://api.projectoxford.ai/emotion/v1.0/recognize","image/jpg");
+    ajax.open("POST", "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize","image/jpg");
 	ajax.setRequestHeader("Content-Type","application/octet-stream");
 	//ajax.setRequestHeader("Accept-Encoding","gzip, deflate");
 	ajax.setRequestHeader("Accept","text/html,application/xhtml+xml,application/xml");
-	ajax.setRequestHeader("Ocp-Apim-Subscription-Key","b75f44bf61ff4c0ab9106427a7af35aa");
+	ajax.setRequestHeader("Ocp-Apim-Subscription-Key","2524a06d185643e6a5a4491495633cea");
 	ajax.send(img);
 }
 
